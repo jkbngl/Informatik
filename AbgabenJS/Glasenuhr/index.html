@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Glasenuhr</title>                                        <!-- Titel der Webseite -->
+    </head>
+    <body>
+        
+        <div id="main" class="container">
+            <h2>Glasenuhr</h2>                                          <!-- Ueberschrift -->
+            <br>
+            <button onclick="loadTime()">Momentane Zeit</button>
+            <br>
+            <br>
+            Stunde: <input type="text" id="hour" value="14" onload="getHours();">
+            <br>
+            <br>
+            Minute: <input type="text" id="minute" value="00" onload="getHours();">
+            <br>
+            <br>
+            <button onclick="myFunction()">Glocken laeuten!</button>
+            <br>
+            <br>
+            <img src="./img/help.PNG" alt="Mountain View">
+        </div>
+
+        <script src="./js/script.js"></script>                              <!-- Einbinden des Scripts -->
+        
+        <style>                                                             
+            .container                                                       
+            {
+                display: table;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+            }
+        </style>
+        
+        <script>
+            function loadTime()
+            {
+                var d = new Date();
+                var hours = d.getHours();
+                var minutes = d.getMinutes();
+                                
+                document.getElementById('hour').value = hours;
+                document.getElementById('minute').value = minutes;
+            }
+        </script>
+        
+        <span id="audio"></span>
+    </body>
+</html>
