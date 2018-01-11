@@ -51,30 +51,8 @@ function playsound(stunde, minute)
     var doppel = n / 2;
     var einzel = n % 2;
     
-    alert("Doppelschlaege: " + parseInt(doppel) + "\nEinzelschlaege: " + parseInt(einzel));
-    
-    /*
-    for(var i = 0; i <= parseInt(doppel); i++)
-        playDoubleSound();
-    
-    for(var i = 0; i <= parseInt(einzel); i++)
-        playEinzelSound();
-    */
+    // alert("Doppelschlaege: " + parseInt(doppel) + "\nEinzelschlaege: " + parseInt(einzel));
+	
+	document.getElementById("p1").innerHTML = "Ausgabe: <br>------------------------<br>" + "Doppelschlaege: " + parseInt(doppel) + "\nEinzelschlaege: " + parseInt(einzel) + "<br>------------------------";
 }
 
-function playDoubleSound()
-{
-    var snd = new Audio('./Sounds/bell.mp3');  
-    snd.play();
-    snd.play();
-    
-    alert("D");
-}
-
-function playEinzelSound()
-{
-    var snd = new Audio('./Sounds/bell.mp3');
-    snd.play();
-    
-    alert("S");
-}

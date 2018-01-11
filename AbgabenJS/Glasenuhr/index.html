@@ -18,8 +18,11 @@
             <br>
             <button onclick="myFunction()">Glocken laeuten!</button>
             <br>
+			
+			<p id="p1">Ausgabe: </p>
+			
             <br>
-            <img src="./img/help.PNG" alt="Mountain View">
+            <img src="./img/help.PNG" alt="Wikipedia Bild - Glasenuhr">
         </div>
 
         <script src="./js/script.js"></script>                              <!-- Einbinden des Scripts -->
@@ -45,7 +48,8 @@
                 document.getElementById('minute').value = minutes;
             }
         </script>
-        
+        <audio id="myAudio" src="./Sounds/bell.mp3"></a>
+		
         <span id="audio"></span>
     </body>
 </html>

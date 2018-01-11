@@ -1,3 +1,4 @@
+var anzahlVersuche = 0;
 var context = document.getElementById('puzzle').getContext('2d');   // Auf den Canvas soll ein 2D Objekt dargestellt werden
 var img = new Image();                                              // Das 2D Objekt ist ein Bild
 img.src = './img/feld.jpg';                                         // Pfad zum Bild
@@ -29,6 +30,9 @@ document.getElementById('puzzle').onclick = function(e)             // Neu berec
     
     if (distance(clickLoc.x, clickLoc.y, emptyLoc.x, emptyLoc.y) == 1) 
     {
+        anzahlVersuche++;
+        document.getElementById("p1").innerHTML = "Anzahl Klicks: " + anzahlVersuche;
+        
         slideTile(emptyLoc, clickLoc);
         drawTiles();
     }
